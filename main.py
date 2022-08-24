@@ -1,10 +1,11 @@
 from bleak import discover
 from asyncio import new_event_loop, set_event_loop, get_event_loop
-from time import sleep, time_ns
+from time import sleep
 from binascii import hexlify
 from json import dumps
 from sys import argv
 from datetime import datetime
+import time_ns
 
 # Configure update duration (update after n seconds)
 UPDATE_DURATION = 1
@@ -18,13 +19,13 @@ recent_beacons = []
 
 def get_best_result(device):
     recent_beacons.append({
-        "time": time_ns(),
+        "time": time_ns.time_ns(),
         "device": device
     })
     strongest_beacon = None
     i = 0
     while i < len(recent_beacons):
-        if(time_ns() - recent_beacons[i]["time"] > RECENT_BEACONS_MAX_T_NS):
+        if(time_ns.time_ns() - recent_beacons[i]["time"] > RECENT_BEACONS_MAX_T_NS):
             recent_beacons.pop(i)
             continue
         if (strongest_beacon == None or strongest_beacon.rssi < recent_beacons[i]["device"].rssi):
