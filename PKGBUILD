@@ -2,7 +2,7 @@
 # modified by blackbunt
 
 pkgname=airstatus-git
-pkgver=20230124.3083d6e
+pkgver=20230124.dfa6714
 pkgrel=1
 pkgdesc="Check AirPods battery levels on Linux"
 arch=('i686' 'x86_64')
@@ -13,9 +13,12 @@ makedepends=('git')
 provides=('airstatus')
 conflicts=('airstatus')
 source=("git+https://github.com/blackbunt/AirStatusLinux.git"
-        "airstatus.service")
+        "airstatus.service"
+        "time_ns.py"
+        )
 sha256sums=('SKIP'
-            '13ea0ae4760febf5b5f01cc2c64e39ede61ba6cce3514d3c6e17cebe2b574ebc')
+            '13ea0ae4760febf5b5f01cc2c64e39ede61ba6cce3514d3c6e17cebe2b574ebc'
+            'aad9238ddaae6de9cfe57e643485da440af65de9fd86140ed9a90e9b0ca533d7')
 
 pkgver() {
   cd AirStatusLinux
