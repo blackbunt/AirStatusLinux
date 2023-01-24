@@ -2,7 +2,7 @@
 # modified by blackbunt
 
 pkgname=airstatus-git
-pkgver=20220109.db9de00
+pkgver=20230124
 pkgrel=1
 pkgdesc="Check AirPods battery levels on Linux"
 arch=('i686' 'x86_64')
