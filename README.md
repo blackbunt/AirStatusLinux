@@ -1,8 +1,9 @@
 # **AirStatus for Linux**
 #### Check your AirPods battery level on Linux
+forked from [delphiki/AirStatus](https://github.com/delphiki/AirStatus), I addded PKGBUILD for arch and updated the main file for newer Airpod models
 
 #### What is it?
-This is a Python 3.6 script, forked from [faglo/AirStatus](https://github.com/faglo/AirStatus) that allows you to check AirPods battery level from your terminal, as JSON output.
+This is a Python 3.6 script, forked from [faglo/AirStatus](https://github.com/faglo/AirStatus) that allows you to check AirPods battery level from your terminal, as JSON output. 
 
 ### Usage
 
@@ -17,6 +18,22 @@ Output will be stored in `output_file` if specified.
 ```
 {"status": 1, "charge": {"left": 95, "right": 95, "case": -1}, "charging_left": false, "charging_right": false, "charging_case": false, "model": "AirPodsPro", "date": "2021-12-22 11:09:05"}
 ```
+### Installing AirStatus as a service on Arch with Pacman
+
+clone the Repo, make package and install the package 
+
+```
+git clone https://github.com/blackbunt/AirStatusLinux
+cd AirStatusLinux
+makepkg
+sudo pacman -U <package-name>.pkg.tar.zst
+```
+output of the service is located here:
+
+```
+/tmp/airstatus.out
+```
+
 
 ### Installing as a service
 
