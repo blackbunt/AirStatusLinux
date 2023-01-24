@@ -2,7 +2,7 @@
 # modified by blackbunt
 
 pkgname=airstatus-git
-pkgver=20230124.dfa6714
+pkgver=20230124.b123b95
 pkgrel=1
 pkgdesc="Check AirPods battery levels on Linux"
 arch=('i686' 'x86_64')
@@ -30,5 +30,6 @@ package() {
 
   cd AirStatusLinux
   install -Dm644 main.py "${pkgdir}/usr/lib/airstatus.py"
+  install -Dm644 time_ns.py "${pkgdir}/usr/lib/time_ns.py"
   install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/airstatus"
 }
