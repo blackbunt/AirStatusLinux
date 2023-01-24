@@ -15,7 +15,7 @@ conflicts=('airstatus')
 source=("git+https://github.com/blackbunt/AirStatusLinux.git"
         "airstatus.service")
 sha256sums=('SKIP'
-            'dc74cf84be34ba277b1e684eff8a9726600e6cc1dc9b06ffce811de01afbf8b3')
+            '13ea0ae4760febf5b5f01cc2c64e39ede61ba6cce3514d3c6e17cebe2b574ebc')
 
 pkgver() {
   cd AirStatus
