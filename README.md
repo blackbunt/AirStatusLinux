@@ -28,7 +28,7 @@ cd AirStatusLinux
 makepkg
 sudo pacman -U <package-name>.pkg.tar.zst
 ```
-output of the seervice is located here:
+output of the service is located here:
 
 ```
 /tmp/airstatus.out
