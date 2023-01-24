@@ -18,7 +18,7 @@ sha256sums=('SKIP'
             '13ea0ae4760febf5b5f01cc2c64e39ede61ba6cce3514d3c6e17cebe2b574ebc')
 
 pkgver() {
-  cd AirStatus
+  cd AirStatusLinux
   printf "%s.%s" "$(git show -s --format=%cs | tr -d -)" "$(git rev-parse --short HEAD)"
 }
 
