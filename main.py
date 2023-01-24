@@ -83,6 +83,8 @@ def get_data():
         model = "AirPods1"
     elif chr(raw[7]) == 'a':
         model = "AirPodsMax"
+    elif chr(raw[7]) == '4':
+        model = "AirPodsPro2"
     else:
         model = "unknown"
 
